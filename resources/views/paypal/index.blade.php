@@ -59,6 +59,22 @@
                     <h3 class="text-center">Laravel PayPal Payment Gateway Integration Example</h3>
                     <p class="text-center">This is a simple example of PayPal payment gateway integration in Laravel.</p>
                     <p class="text-center">Click the button below to make a payment.</p>
+
+
+                    {{-- product information --}}
+
+                    <div class="text-center mb-4">
+                        <h4>Product Name: Sample Product</h4>
+                        <p>Price: $10.00</p>
+                        <p>Currency: USD</p>
+                        <p>Order ID: 12345</p>
+                        <p>Quantity: 1</p>
+                        <p>Description: This is a sample product for testing PayPal integration.</p>
+                    </div>
+
+                    
+
+
                     <form action="{{ route('paypal.payment') }}" method="GET" class="text-center">
                         @csrf
                         <input type="hidden" name="amount" value="10.00">
